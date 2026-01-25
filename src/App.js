@@ -5,7 +5,7 @@ import WordInput from './components/WordInput'
 
 function App() {
   return (
-    <div >
+    <div className='container'>
       <Timer />
       <Grid />
       <WordInput />

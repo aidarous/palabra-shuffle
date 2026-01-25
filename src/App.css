@@ -1,4 +1,9 @@
-letters{
+.container{
+    display: grid;
+    justify-content: center;
+}
+
+.letters{
     font-size: 40px;
     font-weight: bold;
     height: 60px;
