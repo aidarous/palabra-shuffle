@@ -19,8 +19,8 @@ function MainGame() {
 }
     return ( 
         <div>
-            <h1 className="text-2xl font-bold mb-4">Word Shake Game</h1>
-      <p className="text-xl">⏱️ Time left: {time}s</p>
+            <h1 className="text-2xl font-bold mb-4">Palabra Shuffle</h1>
+      <p className="text-xl">⏱️ Time left: {time}</p>
       <Grid grid={grid} />
       <WordInput onSubmit={handleWordSubmit} />
       <div className="mt-4">
