@@ -6,7 +6,7 @@ import Timer from './Timer';
 
 function MainGame() {
 
-    const [grid, setGrid] = useState([useState()]);
+    const [grid, setGrid] = useState([]);
   const [foundWords, setFoundWords] = useState([]);
   const [score, setScore] = useState(0);
   const time =  Timer(60); // 60 seconds

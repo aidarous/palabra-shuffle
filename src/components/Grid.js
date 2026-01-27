@@ -19,8 +19,8 @@ function Grid() {
       return alphabet[randIndex];
     });
     setGrid(randomGrid);
-  }, [])
-
+  }, [totalLetters])
+ 
   return (
     <div className='letter-grid' >
       {grid.map((letter, index)=>(
