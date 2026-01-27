@@ -2,14 +2,14 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 
-
+const alphabet = 'AÁBCDEÉFGHIÍJKLMNÑOÓPQRSTUÚVWXYZ'.slice(0, 12).split('');
 
 function Grid() {
 
   const gridSize = 4
   //const gridRow = 4
   const totalLetters = gridSize * gridSize;
-  const alphabet = 'AÁBCDEÉFGHIÍJKLMNÑOÓPQRSTUÚVWXYZ'.slice(0, 12).split('');
+  
  
   const [grid, setGrid] = useState([])
 
@@ -19,7 +19,7 @@ function Grid() {
       return alphabet[randIndex];
     });
     setGrid(randomGrid);
-  }, [totalLetters])
+  }, [alphabet,totalLetters])
  
   return (
     <div className='letter-grid' >
