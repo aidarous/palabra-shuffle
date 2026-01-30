@@ -20,11 +20,14 @@ function Grid() {
     });
     setGrid(randomGrid);
   }, [alphabet,totalLetters])
+
+
+  
  
   return (
     <div className='letter-grid' >
       {grid.map((letter, index)=>(
-        <div className='letters' key={index}>
+        <div className='letters' key={index} onClick={()=>{console.log(`${letter}`)}}>
           {letter}
         </div> 
       ))}
