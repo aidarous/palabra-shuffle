@@ -1,20 +1,20 @@
 import React from 'react'
 
-const WordInput = ({ onSubmit }) => {
-  const [word, setWord] = React.useState('');
+const WordInput = ({value, onSubmit, onClear }) => {
+  
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onSubmit(word.toUpperCase());
-    setWord('');
-  };
+ 
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={(e) => {
+        e.preventDefault();
+        onSubmit(value);
+        onClear();
+      }}>
       <input
         className="border p-2"
         type="text"
-        value={word}
+        value={value}
         onChange={(e) => setWord(e.target.value)}
         placeholder="Type a word..."
       />
