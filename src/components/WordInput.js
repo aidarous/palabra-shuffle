@@ -15,7 +15,7 @@ const WordInput = ({value, onSubmit, onClear }) => {
         className="border p-2"
         type="text"
         value={value}
-        onChange={(e) => setWord(e.target.value)}
+        
         placeholder="Type a word..."
       />
       <button className="ml-2 px-4 py-2 bg-blue-500 text-white" type="submit">
