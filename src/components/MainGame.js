@@ -41,6 +41,7 @@ function MainGame() {
       />
       <WordInput
       value={currentWord}
+      onChange={setCurrentWord}
       onSubmit={handleWordSubmit}
       onClear={() => setCurrentWord('')}
       />
