@@ -9,7 +9,7 @@ const WordInput = ({value, onChange, onSubmit, onClear }) => {
     <form onSubmit={(e) => {
         e.preventDefault();
         if (!value.trim()) return;
-        onSubmit(value.toUpperCase);
+        onSubmit(value.toUpperCase());
         onClear();
       }}>
       <input
