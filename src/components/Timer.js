@@ -3,20 +3,8 @@ import { useState, useEffect } from 'react'
 
 
 
-const Timer = () => {
-    const [count, setCount] = useState(180);
-
-    useEffect(()=> {
-      if (count === 0){
-        return
-      }
-
-   const intervalId = setInterval(() => {
-      setCount(count - 1);
-    }, 1000);
-
-    return () => clearInterval(intervalId); // Clean up the interval on unmount
-  }, [count])
+const Timer = ({count}) => {
+    
 
   const minutes = Math.floor(count / 60);
   const seconds = count% 60;

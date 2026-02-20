@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState} from 'react'
+import { useState, useEffect} from 'react'
 import Grid from './Grid';
 import WordInput from './WordInput';
 import Timer from './Timer';
@@ -18,6 +18,19 @@ function MainGame() {
   const [score, setScore] = useState(0);
   const time =  Timer(60); // 60 seconds
   const [currentWord, setCurrentWord] = useState('');
+  const [count, setCount] = useState(180);
+
+    useEffect(()=> {
+      if (count === 0){
+        return
+      }
+
+   const intervalId = setInterval(() => {
+      setCount(count - 1);
+    }, 1000);
+
+    return () => clearInterval(intervalId); // Clean up the interval on unmount
+  }, [count])
 
 
 
@@ -33,7 +46,7 @@ function MainGame() {
     return (  
         <div>
             <h1 className="text-2xl font-bold mb-4">Palabra Shuffle</h1>
-      <p className="text-xl">⏱️ Time left: {time}</p>
+      <Timer count={count} />
       <Grid grid={grid} 
       onLetterClick={(letter) =>
     setCurrentWord((prev) => prev + letter)
