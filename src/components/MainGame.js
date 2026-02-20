@@ -57,6 +57,7 @@ function MainGame() {
       onChange={setCurrentWord}
       onSubmit={handleWordSubmit}
       onClear={() => setCurrentWord('')}
+      count={count}
       />
       <div className="mt-4">
         <h2 className="font-semibold">Words Found:</h2>
